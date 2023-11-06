@@ -1,20 +1,22 @@
 import express from "express";
 const port=5000;
 const app = express();
+app.set('view engine', 'ejs');
+app.use(express.static("public"));
 
 app.get("/",(req,res)=>{
-    res.send("<h1>Hello world</h1>");
+    res.render("home");
 });
 app.get("/about",(req,res)=>{
-    res.send("<h1>Welcome to about page</h1>");
+    res.render("about");
 });
 
 app.get("/contact",(req,res)=>{
-    res.send("<h1>Welcome to contact page</h1>");
+    res.render("contact");
 });
 
 app.get("/blog",(req,res)=>{
-    res.send("<h1>Welcome to blog page</h1>");
+    res.render("blog");
 });
 
 app.listen(port,(res,req)=>{
