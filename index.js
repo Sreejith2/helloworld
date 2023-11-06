@@ -3,18 +3,18 @@ const port=5000;
 const app = express();
 
 app.get("/",(req,res)=>{
-    res.send("Hello world");
+    res.send("<h1>Hello world</h1>");
 });
 app.get("/about",(req,res)=>{
-    res.send("Welcome to about page");
+    res.send("<h1>Welcome to about page</h1>");
 });
 
 app.get("/contact",(req,res)=>{
-    res.send("Welcome to contact page");
+    res.send("<h1>Welcome to contact page</h1>");
 });
 
 app.get("/blog",(req,res)=>{
-    res.send("Welcome to blog page");
+    res.send("<h1>Welcome to blog page</h1>");
 });
 
 app.listen(port,(res,req)=>{
